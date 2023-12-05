@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorGame</title>
+    <style>
+        body {
+            margin: 50px;
+            padding: 100px;
+            text-align: center;
+            justify-content: center;
+            /* background-color: rgb(175, 131, 131); */
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            margin: 0px 250px;
+            border: 5px solid black;
+            border-radius: 20px;
+            transition: 1.2s;
+
+        }
+
+        .alphabet input {
+            text-align: center;
+            justify-content: center;
+            margin: 0px 330px;
+            border: 2px solid black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        h1 {
+            font-size: large;
+            font-family: cursive;
+            text-shadow: 2px 3px #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color: blue;">Color Game Box </h1>
+    <div id="box"></div><br><br>
+
+    <div class="alphabet">
+        <input type="text" placeholder="Enetr a color name">
+    </div>
+
+    <script>
+
+        let box = document.querySelector("#box"),
+            input = document.querySelector("input")
+
+        input.addEventListener("input", () => {
+            box.style.borderRadius = input.value
+            box.style.backgroundColor = input.value
+            box.style.width = input.value
+        })
+    </script>
+
+</body>
+
+</html>
