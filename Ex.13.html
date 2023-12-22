@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Operator</title>
+</head>
+
+<body>
+
+  <script>
+
+    document.write("<h3> Special Operators...</h3>");
+
+    var a = true;
+    var b = false;
+    var human = {
+      firstname: "Pranab",
+      lastname: "Mandal",
+      age: 18,
+      hobby: "Full Stack Web Developer"
+    };
+
+    class p {
+
+    }
+
+    /*
+      if (condition){
+        document.write("the cindition is true");
+      }
+      else{
+        document.write("the condition is false")
+      }
+
+      the above if/else condition statement is written in Javascript is (? batween :) 
+    */
+    var c = b ? 5 : 9;
+    document.write("The value of c: " + c);
+    document.write("<br>");
+
+
+    //In Javascript there is Special operator known as let.....In let operator works in comma(,) and print the last naumber in (())....  
+    let x = (1, 3, 5);
+    document.write("Value of x: " + x);
+    document.write("<br>");
+
+    //Delete operator.....
+    delete human.lastname;
+    document.write("Delete the lastname from the object: " + human.lastname);
+    document.write("<br>");
+
+    //in operator......
+    var c = 'age' in human ? true : false;
+    document.write("If 'age' exists in object 'human':" + c);
+    document.write("<br>");
+
+    //'instanceof' operator......
+    document.write("If a human is a instanceof String object: " + (human instanceof String));
+
+    //new operator....
+    var ps = new p();
+
+    //typeof operator.....
+    document.write("<br>");
+    document.write("Typeof x is: " + (typeof x));
+
+    //vid operator....
+    document.write("<br>");
+    jascript: void func();
+
+
+  </script>
+  <!-- void operator works in HTML... -->
+  <a href="jascript:void(0)">Hellow</a>
+</body>
+
+</html>
