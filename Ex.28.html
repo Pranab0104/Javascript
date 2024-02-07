@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+    <script>
+        /*Creating an object using object constructor*/
+        document.writeln("<h3>Creating Methods in object..</h4>")
+        function employee(id, name, salary){
+            this.id =id;
+            this.name= name;
+            this.salary= salary;
+
+            this.updateSalary =updateSalary;
+            function updateSalary(newsalary){
+                this.salary=newsalary;
+            }
+        }
+
+        var e =new employee(2, "Gaurav Roy", 20000);
+        document.writeln("<br>Salary of: " + e.name + " is: " + e.salary);
+        e.updateSalary(22000);
+
+        document.writeln("<br>UpSalary of: " + e.name + " is: " + e.salary);
+
+    </script>
+</body>
+</html>
