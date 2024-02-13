@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tic Tac Toe Multiplayer</title>
+  <style>
+    .boxcontainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  height: min(20vh, 20vw);
+  width: min(20vh, 20vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid black;
+  font-size: 3rem;
+}
+
+.row{
+  display: flex
+}
+
+.buttons{
+  margin: 33px;
+  text-align:center;
+}
+
+.buttons button{
+  padding: 8px 12px;
+}
+
+  </style>
+  <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Welcome to Tic Tac Toe Multiplayer</h1>
+    <h2>How to play?</h2>
+    <p>Choose a unique server name or use the link your friend sent you. Fetch the data to pull the board and punch in your entry. Once you are done punching 'X' or 'O', Its your friend's turn. Keep clicking 'Fetch Status' button to refresh the board</p>
+  </div>
+  <div class="boxcontainer">
+    <div class="row">
+      <div class="box"> </div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"> </div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="row">
+      <div class="box"> </div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <div class="buttons">
+      <button id="fetch">Fetch Status</button>
+    </div>
+
+
+    <script>
+    <!-- <script src="script.js"> -->
+        url = 'https://ttt-backend.codewithharry.repl.co/'
+let a = document.getElementsByClassName("box")
+let chance = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+let server = window.location.search.split("=")[1]
+// Assign a server to the player if not present
+if (!server) {
+  let x = prompt("Enter/choose a unique game code")
+  window.location = window.origin + "?id=" + x
+}
+
+const fetchDataAndPopulate = async () => {
+  let response = await fetch(url + server)
+  const data = await response.json()
+  if (data.value) {
+    chance = JSON.parse(data.value)
+    Array.from(chance).forEach((element, index) => {
+      if (chance[index] == 1) {
+        v = "X"
+      }
+      else if (chance[index] == -1) {
+        v = "O"
+      }
+      else {
+        v = ""
+      }
+      a[index].innerHTML = v
+
+
+    })
+  }
+}
+
+fetchDataAndPopulate()
+const sendData = async () => {
+  fetch(url + "update", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body:
+      JSON.stringify({
+        key: server,
+        value: JSON.stringify(chance)
+      })
+  })
+}
+
+Array.from(a).forEach((element, index) => {
+  element.addEventListener("click", (e) => {
+    if (chance.filter(x => x === 1).length > chance.filter(x => x === -1).length) {
+      chanceO = true;
+      chance[index] = -1
+    }
+    else {
+      chanceO = false
+      chance[index] = 1
+    }
+    e.target.innerHTML = chanceO ? "O" : "X"
+    sendData()
+  })
+})
+
+document.getElementById("fetch").addEventListener("click", () => {
+  fetchDataAndPopulate()
+})
+setInterval(()=>{
+  fetchDataAndPopulate()
+}, 3000)
+    </script>
+</body>
+
+</html>
