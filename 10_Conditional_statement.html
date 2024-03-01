@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional_statement</title>
+</head>
+
+<body>
+    <h1>Conditional statements in Js</h1>
+    <script>
+        console.log("Condition Satements");
+        let a = prompt("Hey whats ur age");
+        a = Number.parseInt(a);
+        if (a < 0) {
+            alert("This is an invalid age");
+        } else if (a < 18) {
+            alert("You are not eligible to give a Vote");
+        } else if (a < 60 && a >= 18) {
+            alert("You are eligible to give a Vote");
+        } else {
+            alert("You are a senior citizen");
+        }
+
+    </script>
+</body>
+
+</html>
