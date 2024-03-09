@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set ch 03</title>
+</head>
+<body>
+    <h1>We will solve the chapter set 3 questions</h1>
+
+    <script>
+
+        let marks = {
+            Pranav : 89,
+            Shiv : 85,
+            Gaurav : 70,
+            Banty : 60
+        }
+
+        //Problem 01
+        
+        for(let i = 0; i<Object.keys(marks).length; i++){
+            console.log(" The marks of " + Object.keys(marks)[i] + " are: "  + marks[Object.keys(marks)[i]])
+        }
+
+
+        //Problem 02
+        for(let key in marks){
+            console.log(" The marks of " + key + " are: "  + marks[key])
+        }
+
+
+        //Problem 03
+        let cn = 27;
+        let i ;
+
+        while (i!=cn) {
+            // i =  prompt("Enter a correct number: ")
+            console.log("Please try again.")
+            i =  prompt("Enter a correct number: ")
+        }
+        console.log("Yah! you enter a correct number.")
+
+
+        //Problem 03
+        const mean =(a,b,c,d,e,f)=>{
+            return ( a+b+c+d+e+f)/6 
+        }
+
+        console.log(mean(1, 2, 3, 4, 5, 6))
+
+    </script>
+</body>
+</html>
