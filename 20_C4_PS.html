@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set of ch4</title>
+</head>
+<body>
+    <h1>This is the practice set of chapter 4</h1>
+
+    <script>
+
+        //Q1
+        let name = "Pran\"";
+        console.log(name.length);
+
+        //Q2
+        const sentence = 'The quick tennis ball jumpes over the high wall.';
+        const word = 'ball2';
+        console.log(sentence.includes());
+        console.log(`The word "${word}" ${sentence.includes(word) ?`is` : `is not` } in the sentnce. `);
+
+        //Q3
+        let str = "Pranav"
+        console.log(str.toLowerCase());
+
+        //Q4
+        let str1 = "I will become a fullstack web developer in 2025"
+        console.log(str1);
+        let amt = Number.parseInt(str1.slice(43))
+        console.log(amt);
+        console.log(typeof amt);
+
+        //Q5
+        let str2 = "Pranav"
+        str2[5] = "b"
+        console.log(str2)//In a js we couldn't change the existing string, because it is immutable.
+    </script>
+</body>
+</html>
