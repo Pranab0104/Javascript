@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Arrays in Js program to use multiple datatypes.</h1>
+
+    <script>
+
+        
+        function ar() {
+            let arr = ["Pranav", "Shiv", "Banty", "Gaurav", 54, 98]
+            let arr1 = [01, 03, 16, 02]
+            let arr2 = [49, 03, 16, 221]
+            let narr= ["January", "March", "August", "December"]
+            
+            for (let i = 0; i < arr.length; i++) {
+                console.log(arr[i]);
+            }
+            arr.push("Shubham")
+            console.log(arr);
+
+            arr.pop()
+            console.log(arr);
+
+            arr.shift()
+            console.log(arr);
+
+            arr.unshift("Arnav")
+            console.log(arr);
+
+            arr.join()
+            console.log(arr.join(" and "));
+
+            delete(arr[3])
+            console.log(arr);
+
+            let a= arr.concat(arr1,narr);
+            console.log(a);
+
+            arr2.sort()
+            console.log(arr2);
+
+            //the reverse method will reverse the array..
+            //arr.reverse();
+
+            //set the arrays in decending order...
+            let com = (a,b)=>{
+                return b -a
+            }
+            arr2.sort(com)
+            console.log(arr2);
+
+            //set the arrays in ascending order...
+            let comp = (a,b)=>{
+                return a -b
+            }
+            arr2.sort(comp)
+            console.log(arr2);
+
+            //Splice method with array in js...
+            arr.splice(3,2, 115, 541, 654, 687);
+            console.log(arr);
+
+            //Slice method with array in js...
+            let newarr1= arr1.slice(2,3);
+            console.log(newarr1);
+        }
+    
+
+        ar();
+
+    </script>
+</body>
+</html>
