@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Some other methods of arrays in Js.</h1>
+    <script>
+
+        let arr = [5, 6, 8, 2, 1]
+
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]);
+        }
+
+        //for each loop
+        arr.forEach(element => {
+           console.log(element*element); 
+        });
+
+        //Convert the string into array
+        let name = "Pranab"
+        let arr1 = Array.from(name)
+        console.log(arr1);
+
+        //for of loop
+        for(let item of arr){
+            console.log(item);
+        }
+
+        //for in loop
+        for(let i in arr){
+            console.log(i);
+        }
+    </script>
+</body>
+</html>
