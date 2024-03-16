@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map_Reduce filter</title>
+</head>
+<body>
+    <h1>Map & Reduce filter in JS.</h1>
+    <script>
+        //map method in js
+        let arr = [5,4,98,12]
+        //console.log(arr);
+        let a = arr.map((value, index, array)=>{
+            console.log(value, index, array)
+            return value + 2
+        })
+        console.log(a);
+
+        //filter method in js
+        let arr1 = [65,45,29,8]
+        let a1 = arr1.filter((a)=>{
+            return a<30;
+        })
+        console.log(a1);
+
+        //reduce method in js
+        let arr2 = [5,4,3,2,1]
+        let a2 = arr2.reduce((pra, man)=>{
+            return pra+man;
+        })
+        console.log(a2);
+    </script>
+</body>
+</html>
