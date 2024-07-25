@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice set 6</title>
+</head>
+
+<body>
+    <h1>Chapter set 6 questions of JS.</h1>
+    <script>
+        let age = prompt("Enter your age!")
+        age = Number.parseInt(age)
+        let runAgain = true;
+
+        const canDrive = (age) => {
+            return age >= 18 ? true : false
+        }
+
+        while (runAgain) {
+            let age = prompt("Enter your age!")
+            age = Number.parseInt(age)
+
+            if (age<0){
+                console.error("Please enter a valid age or greater than 0.");
+                break;
+            }
+
+            if (canDrive(age)) {
+                alert("You can drive any type of vehicle. ")
+            }
+
+            else {
+                alert("You cannot drive any type of vehicle. ")
+            }
+
+            runAgain = confirm("Doyou want to run again these program in prompt?")
+        }
+
+    </script>
+
+</body>
+
+</html>
