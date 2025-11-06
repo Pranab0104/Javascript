@@ -1,3 +1,6 @@
+// 1.Basic Operators (Arithmetic, Assignment, Increment, Decrement,
+// Comparison, Logical, Bitwise)
+
 // a. Create two numbers a = 10 and b = 3.
 // Perform and log: a + b, a - b, a * b, a / b, a % b.
 
@@ -34,18 +37,33 @@ let count = 5;
 // console.log(count++)
 // console.log(count)
 
-console.log(count)
-console.log(count--)
-console.log(count)
+console.log(count);
+console.log(count--);
+console.log(count);
 
 // d. Compare two values: 5 == “5” and 5 === “5”.
 // Observe difference.
 
-console.log(5=="5");
-console.log(5==="5");
+console.log(5 == "5");
+console.log(5 === "5");
 
 // e. Check if 10 is greater than 5, less than 20, and equal to 10.
 let p = 10;
-console.log(p>5);
-console.log(p<20);
-console.log(p==10);
+console.log(p > 5);
+console.log(p < 20);
+console.log(p == 10);
+
+// 2. Variable Hoisting in JavaScript
+// a. Predict output of:
+console.log(d);
+var d = 10;
+
+// b. Predict output of:
+console.log(z);
+let z = 10;
+
+// c. Predict output of:
+test();
+function test() {
+  console.log("Hello");
+}
