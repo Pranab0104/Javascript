@@ -221,21 +221,29 @@
 // If age > 18 and country == “India” → log “Eligible for Vote”
 // Else → “Not Eligible”
 
-let age = prompt("Enter your age: ");
-let country = prompt("Country must be India, Enter your country: ");
+// let age = prompt("Enter your age: ");
+// let country = prompt("Country must be India, Enter your country: ");
 
-age = age.trim();
-country = country.trim();
+// age = age.trim();
+// country = country.trim();
 
-if (age === "" || country === "") {
-  console.error(" Blank spaces are not allowed!");
+// if (age === "" || country === "") {
+//   console.error(" Blank spaces are not allowed!");
+// }
+// else if (isNaN(age)) {
+//   console.error(" Age must be a number!");
+// }
+// else if (Number(age) > 18 && country.toLowerCase() === "india") {
+//   console.log("✅ Eligible for Vote");
+// }
+// else {
+//   console.log(" Not Eligible");
+// }
+
+function abcd(val){
+  val();
 }
-else if (isNaN(age)) {
-  console.error(" Age must be a number!");
-}
-else if (Number(age) > 18 && country.toLowerCase() === "india") {
-  console.log("✅ Eligible for Vote");
-}
-else {
-  console.log(" Not Eligible");
-}
+
+abcd(function(){
+  console.log("Hello Master!")
+});
