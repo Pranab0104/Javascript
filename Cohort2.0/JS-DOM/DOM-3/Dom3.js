@@ -61,7 +61,7 @@ let arr = [
     Trophy: 0,
     Fullname: "Delhi Capitals",
     Owner: "GMGR Groups",
-    Image: "Error",
+    Image: "https://imgs.search.brave.com/UyxurseImjkfmTRQYN2Sbcot6iTLbQTCS9TgsIxBuyM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZGVsaGljYXBpdGFs/cy5pbi9zdGF0aWMt/YXNzZXRzL3dhZi1p/bWFnZXMvNDAvNGMv/ZmEvNC0zLzl2ODBY/eGs2VnEuanBnP3Y9/MS4xMSZ3PTYwMA",
   },
 
   {
@@ -82,7 +82,7 @@ let arr = [
     Trophy: 0,
     Fullname: "Lucknow Super Giants",
     Owner: "Sanjiv Goenka",
-    Image: "Error",
+    Image: "https://i.pinimg.com/1200x/e3/74/fd/e374fd5844b041401f7a3246c76698d2.jpg",
   },
 
   {
@@ -112,7 +112,7 @@ let arr = [
     Trophy: 0,
     Fullname: "Kings XI Punjab",
     Owner: "Preity Zinta, Karan Paul",
-    Image:"Error"
+    Image:"https://i.pinimg.com/1200x/4b/eb/17/4beb1785f05f5fc430ff1b37a0420898.jpg"
   },
 ];
 
@@ -123,7 +123,11 @@ let main = document.querySelector("main");
 btn.addEventListener("click", function () {
   // console.log('clicked')
   let a = Math.floor(Math.random() * arr.length);
-  h.innerHTML = arr[a].team;
+  h.innerHTML = "";
+  h.innerHTML += "Team: " + arr[a].team + "<br>";
+  h.innerHTML += "Trophy: " + arr[a].Trophy + "<br>";
+  h.innerHTML += "Fullname: " + arr[a].Fullname + "<br>";
+  h.innerHTML += "Owner: " + arr[a].Owner + "<br>";
   h.style.backgroundColor = arr[a].secondary;
   main.style.backgroundColor = arr[a].primary;
 
