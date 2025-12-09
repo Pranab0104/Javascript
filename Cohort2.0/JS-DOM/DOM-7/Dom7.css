@@ -18,6 +18,8 @@ body main {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 3%;
+  flex-wrap: wrap;
 }
 html main .card,
 body main .card {
