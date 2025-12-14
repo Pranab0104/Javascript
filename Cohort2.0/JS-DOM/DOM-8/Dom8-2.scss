@@ -29,7 +29,7 @@ body {
       width: 100%;
       border-radius: 15px;
       padding: 1%;
-      background-color: rgba(47, 41, 41, 0.671);
+      background-color: rgba(112, 101, 101, 0.671);
 
       h1 {
         // margin-top: 1%;
@@ -51,33 +51,45 @@ body {
         height: 100%;
         width: 100%;
         margin-top: 1%;
-        padding: 0% 1% 1% 1%;
+        padding: 0% 0% 1% 0%;
         display: flex;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        background-color: burlywood;
+        background-color: rgb(0, 0, 0);
         gap: 2px;
+        position: relative;  
+        overflow: hidden;
 
         .white {
           position: relative;
           height: 100%;
           width: 100%;
-          text-align: center;
           background-color: white;
           border-bottom-left-radius: 15px;
           border-bottom-right-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          padding-bottom: 10px;
+          z-index: 1;
+          border-bottom: 4px solid rgb(181, 181, 181);
         }
 
         .black {
-          color: white;
-          position: relative;
+          position: absolute;
+          top: 0;
           height: 60%;
-          width: 100%;
-          z-index: 2;
-          text-align: center;
-          background-color: rgb(0, 0, 0);
-          border-bottom-left-radius: 15px;
-          border-bottom-right-radius: 15px;
+          width: 45px;
+          background-color: black;
+          color: white;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          z-index: 3;
+          transform: translateX(-50%);
+          border-bottom: 4px solid rgb(90, 87, 87);
         }
       }
     }
