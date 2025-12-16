@@ -40,9 +40,18 @@ body {
         font-weight: 300;
       }
 
+      h2 {
+        // margin-top: 1%;
+        font-size: 2.4vw;
+        color: rgb(183, 132, 12);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 300;
+      }
+
       p {
         font-size: 1.2vw;
-        color: rgb(165, 134, 21);
+        color: rgb(152, 134, 67);
         font-family: cursive;
         font-weight: 300;
       }
@@ -75,6 +84,11 @@ body {
           border-bottom: 4px solid rgb(181, 181, 181);
         }
 
+        .white:hover{
+          cursor: pointer;
+          background-color: rgba(255, 255, 255, 0.633);
+        }
+
         .black {
           position: absolute;
           top: 0;
@@ -90,6 +104,11 @@ body {
           z-index: 3;
           transform: translateX(-50%);
           border-bottom: 4px solid rgb(90, 87, 87);
+        }
+
+        .black:hover{
+          cursor: pointer;
+          background-color: rgb(47, 45, 45);
         }
       }
     }
