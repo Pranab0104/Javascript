@@ -21,6 +21,31 @@ main {
   background: linear-gradient(to top, black, rgb(89, 86, 86), black);
   overflow: auto;
 
+  .mut{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(48, 47, 47, 0.907);
+  }
+
+  .mut i{
+    font-size: 2vw;
+    pointer-events: none;
+    font-weight: 200;
+  }
+
+  .mut:active{
+    scale: 0.8;
+  }
+
   section {
     height: 100%;
     width: 33%;
@@ -49,7 +74,7 @@ main {
         scroll-snap-align: start;
         scroll-snap-stop: always;
 
-        img {
+        video {
           height: 100%;
           width: 100%;
           object-fit: cover;
@@ -118,6 +143,9 @@ main {
           color: white;
 
           div {
+            cursor: pointer;
+            width: 90%;
+            /* background-color: aqua; */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -125,15 +153,21 @@ main {
 
             h4 {
               cursor: pointer;
+              pointer-events: none;
             }
           }
 
           .icon {
             font-size: 2vw;
             font-weight: 100;
+
+            .love{
+              color: crimson;
+            }
           }
 
           h6 {
+            pointer-events: none;
             font-size: 0.8vw;
             font-weight: 100;
           }
