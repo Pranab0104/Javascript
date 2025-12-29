@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+:root {
+  --x: 400px;
+  --y: 400px;
+}
+
+body {
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/32838840/pexels-photo-32838840.jpeg");
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.938));
+  border-radius: 15px;
+  border: 4px solid rgb(255, 255, 255);
+}/*# sourceMappingURL=Dom11.css.map */
